@@ -36,7 +36,7 @@ export class Game {
         this.ctx = this.canvas.getContext('2d')!;
         
         this.setupCanvas();
-        this.player = new Player(this.canvasWidth / 2 - 12, this.canvasHeight - 50);
+        this.player = new Player(this.canvasWidth / 2 - 12, this.canvasHeight - 65);
         
         this.bindEvents();
         this.initStars();
