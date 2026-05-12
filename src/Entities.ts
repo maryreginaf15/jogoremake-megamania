@@ -62,7 +62,7 @@ export class Player extends Entity {
         super(x, y, 24, 24, '#aa00ff', 'player');
     }
 
-    update(dt: number) {} // Logic moved to Game for input handling
+    update(_dt: number) {} // Logic moved to Game for input handling
 
     move(dir: number, dt: number, canvasWidth: number) {
         this.x += dir * this.speed * dt;
