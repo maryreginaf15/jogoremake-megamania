@@ -153,42 +153,52 @@ body {
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 800px), (pointer: coarse) {
+    body {
+        padding: 0;
+        align-items: flex-start;
+    }
+
     #game-container {
         max-width: 100%;
         height: 100dvh;
         border: none;
+        display: grid;
+        grid-template-rows: auto 1fr auto; /* Top, Canvas, Bottom */
+        background-color: #000;
+        overflow: hidden;
     }
 
     #ui-top, #ui-bottom {
-        padding: 5px 15px;
+        padding: 8px 15px;
         font-size: 10px;
+        background: #000; /* Preto sólido para não confundir */
     }
 
     #game-canvas {
-        flex-grow: 1;
         width: 100%;
-        height: 0; /* Força o flexbox a calcular o espaço real */
-        object-fit: contain; /* Garante que o canvas todo apareça sem cortes */
+        height: 100%;
+        min-height: 0; /* Essencial para o grid shrink */
+        object-fit: contain;
+        background-color: #000;
     }
 
     #mobile-controls {
         display: flex;
-        bottom: 60px; /* Sobe um pouco os controles para não colarem no rodapé */
-        padding: 0 10px;
-        height: 100px;
-        opacity: 0.8;
+        bottom: 80px; /* Sobe um pouco mais para garantir que não cubra a nave */
+        height: 120px;
+        opacity: 0.5; /* Mais transparente para ver a nave por baixo se necessário */
     }
 
     .control-btn {
-        width: 55px;
-        height: 55px;
-        font-size: 18px;
-        background: rgba(255, 255, 255, 0.15);
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     #btn-fire {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 }

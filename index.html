@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Megamania Remake - Atari Classic</title>
     <meta name="description" content="Um remake fiel do clássico Megamania do Atari, desenvolvido com HTML5 Canvas e TypeScript.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
 </head>
 <body>
     <div id="game-container">
@@ -12,9 +15,7 @@
             <div id="score-container">SCORE: <span id="score">000000</span></div>
             <div id="lives-container">LIVES: <span id="lives">3</span></div>
         </div>
-        
         <canvas id="game-canvas"></canvas>
-        
         <div id="ui-bottom">
             <div id="energy-bar-container">
                 <div id="energy-bar-label">ENERGY</div>
